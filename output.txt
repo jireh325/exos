@@ -1,0 +1,3 @@
+NullPointerException
+NumberFormatException
+Notion des tests unitaires avec exemples
