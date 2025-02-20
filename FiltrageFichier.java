@@ -20,7 +20,7 @@ public class FiltrageFichier {
     }
 
     public static void main(String[] args) {
-        String inputFile = "C:/Users/LENOVO/Downloads/rapport.txt";   // Fichier source
+        String inputFile = "rapport.txt";   // Fichier source
         String outputFile = "output.txt"; // Fichier filtré
 
 
