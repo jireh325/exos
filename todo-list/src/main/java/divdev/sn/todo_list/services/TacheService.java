@@ -8,7 +8,7 @@ import java.util.List;
 @Service
 public class TacheService {
 
-    private TacheRepository tacheRepository;
+    private final TacheRepository tacheRepository;
 
     public TacheService(TacheRepository tacheRepository) {
         this.tacheRepository = tacheRepository;
@@ -23,7 +23,7 @@ public class TacheService {
     }
 
     public Tache modifierTache(int id, Tache tache) {
-     
+    
         Tache tacheExistante = this.tacheRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Tâche non trouvée avec l'ID : " + id));
     

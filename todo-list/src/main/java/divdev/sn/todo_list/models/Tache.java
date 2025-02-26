@@ -23,16 +23,12 @@ public class Tache {
 
     }
 
-    public Tache(int id, String titre, String description, Status statut){
-        this.id = id;
+    public Tache(String titre, String description, Status statut){
+
         this.titre = titre;
         this.description = description;
         this.statut = statut;
         
-    }
-
-    public int getId(){
-        return id;
     }
 
     public String getTitre(){
