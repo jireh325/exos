@@ -1,0 +1,23 @@
+type Todo {
+    id: ID
+    title: String
+    description: String
+    status: Status
+}
+
+enum Status {
+    TODO
+    IN_PROGRESS
+    DONE
+}
+
+type Query {
+    getAllTodos: [Todo]
+    getOneTodo(id: ID!): Todo
+}
+
+type Mutation {
+    createTodo(title: String!, description: String!, status: Status!): Todo
+    updateTodo(id: ID!, title: String!, description: String!, status: Status!): Todo
+    deleteTodo(id: ID!): Boolean
+}

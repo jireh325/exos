@@ -1,0 +1,25 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://divdev.sn/todolist"
+    xmlns="http://divdev.sn/todolist"
+    elementFormDefault="qualified">
+    
+    <xs:element name="getAllTodosRequest"/>
+    
+    <xs:element name="getAllTodosResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="todos" type="todo" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="todo">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="status" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
